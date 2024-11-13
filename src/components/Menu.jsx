@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 function Menu(props) {
   return (
-    <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white m-4 transform hover:scale-105 transition-transform duration-300 ease-in-out">
+    <main className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white m-4 transform hover:scale-105 transition-transform duration-300 ease-in-out">
       <img src={`/${props.img}`} alt={props.name} className="space-y-3" />
 
       <div className="p-6">
@@ -10,7 +10,7 @@ function Menu(props) {
         <p className="text-green-600 font-semibold text-lg">${props.price}</p>
         <p className="font-bold">{props.soldOut ? "Ready" : "Sold Out"}</p>
       </div>
-    </div>
+    </main>
   );
 }
 

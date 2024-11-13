@@ -1,4 +1,3 @@
-import "../public/css/styles.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Menu from "./components/Menu";
