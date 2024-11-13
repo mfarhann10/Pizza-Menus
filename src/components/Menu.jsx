@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-function Pizza(props) {
+function Menu(props) {
   return (
     <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white m-4 transform hover:scale-105 transition-transform duration-300 ease-in-out">
       <img src={`/${props.img}`} alt={props.name} className="space-y-3" />
@@ -14,4 +14,4 @@ function Pizza(props) {
   );
 }
 
-export default Pizza;
+export default Menu;
