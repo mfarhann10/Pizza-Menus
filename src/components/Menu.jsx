@@ -1,15 +1,20 @@
-/* eslint-disable react/prop-types */
-function Menu(props) {
-  return (
-    <main className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white m-4 transform hover:scale-105 transition-transform duration-300 ease-in-out">
-      <img src={`/${props.img}`} alt={props.name} className="space-y-3" />
+import Pizza from "./Pizza";
+import pizzaData from "../data/pizza";
 
-      <div className="p-6">
-        <h1 className="font-bold text-xl text-gray-800 mb-2">{props.name}</h1>
-        <p className="text-gray-700 text-base mb-4">{props.ingredients}</p>
-        <p className="text-green-600 font-semibold text-lg">${props.price}</p>
-        <p className="font-bold">{props.soldOut ? "Ready" : "Sold Out"}</p>
-      </div>
+function Menu() {
+  return (
+    <main className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+      {pizzaData.map((pizza, index) => (
+        <Pizza
+          key={index}
+          id={index}
+          photoName={pizza.photoName}
+          name={pizza.name}
+          ingredients={pizza.ingredients}
+          price={pizza.price}
+          soldOut={pizza.soldOut}
+        />
+      ))}
     </main>
   );
 }

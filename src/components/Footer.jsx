@@ -5,7 +5,9 @@ function Footer() {
   const closeHour = 22;
   const isOpen = hour >= openHour && hour <= closeHour;
   return (
-    <footer className="font-bold text-xl">{date}. We're currently Open</footer>
+    <footer className="font-bold text-xl">
+      {isOpen ? `${date}. We're currently Open` : "We're Closed"}
+    </footer>
   );
 }
 
