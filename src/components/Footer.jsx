@@ -1,12 +1,19 @@
+import Order from "./Order";
+
 function Footer() {
-  const date = new Date().toLocaleTimeString();
   const hour = new Date().getHours();
   const openHour = 8;
   const closeHour = 22;
   const isOpen = hour >= openHour && hour <= closeHour;
   return (
     <footer className="font-bold text-xl">
-      {isOpen ? `${date}. We're currently Open` : "We're Closed"}
+      {isOpen ? (
+        <Order closeHour={closeHour} />
+      ) : (
+        <p className="mb-5">
+          We're happy to welcome you between {openHour}.00 until {closeHour}.00
+        </p>
+      )}
     </footer>
   );
 }

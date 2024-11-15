@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 function Pizza(props) {
+  if (props.pizzaObj.soldOut) return null;
   return (
     <div className="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white m-4 transform hover:scale-105 transition-transform duration-300 ease-in-out">
       <img
@@ -19,9 +20,9 @@ function Pizza(props) {
           ${props.pizzaObj.price}
         </p>
         {props.pizzaObj.soldOut ? (
-          <p className="font-bold">Ready</p>
+          <p className="font-bold">Soldout</p>
         ) : (
-          <p className="font-bold">Sold out</p>
+          <p className="font-bold">Ready</p>
         )}
       </div>
     </div>
